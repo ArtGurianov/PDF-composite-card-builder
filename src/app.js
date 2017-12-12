@@ -15,7 +15,7 @@ app.use(cors());
 app.options('*', cors());
 
 app.get('*',(req,res) => {
-  res.sendFile('/index.html');
+  res.sendFile('/public/index.html');
 });
 
 app.post('/api/generate_pdf', (req, res) => {
