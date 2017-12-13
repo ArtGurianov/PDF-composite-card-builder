@@ -86,7 +86,7 @@ app.post('/api/send_email', (req, res) => {
     from: 'info@artgurianov.com', // sender address
     to: 'artgurianov@yandex.ru', // list of receivers
     subject: `New message from ${formName}`, // Subject line
-    text: ` Name: ${formName}, \n Company: ${formCompany}, \n Email: ${formEmail} \n, Phone: ${formPhone}, \n Subject: ${formSubject}, \n \n Message: ${formMessage} \n` //, // plaintext body
+    text: ` Name: ${formName}, \n Company: ${formCompany}, \n Email: ${formEmail} \n, Phone: ${formPhone}, \n Subject: ${formSubject}, \n \n Message: \n${formMessage}\n` //, // plaintext body
     //text: text
     // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
   };
