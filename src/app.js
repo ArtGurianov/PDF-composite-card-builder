@@ -75,18 +75,18 @@ app.post('/api/send_email', (req, res) => {
 
 
   var transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    service: 'Yandex',
     auth: {
-      user: 'guryan1996@gmail.com', // Your email id
-      pass: '4hnpsabCpAW6' // Your password
+      user: 'info@artgurianov.com', // Your email id
+      pass: 'Art1996' // Your password
     }
   });
 
   var mailOptions = {
-    from: 'guryan1996@gmail.com', // sender address
+    from: 'info@artgurianov.com', // sender address
     to: 'artgurianov@yandex.ru', // list of receivers
-    subject: formSubject, // Subject line
-    text: `Hello! My name is ${formName}! I work in ${formCompany} company :) I have an offer for you about ${formSubject}! Please call me back: ${formPhone}!` //, // plaintext body
+    subject: `New message from ${formName}`, // Subject line
+    text: ` Name: ${formName}, \n Company: ${formCompany}, \n Email: ${formEmail} \n, Phone: ${formPhone}, \n Subject: ${formSubject}, \n \n Message: ${formMessage} \n` //, // plaintext body
     //text: text
     // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
   };
